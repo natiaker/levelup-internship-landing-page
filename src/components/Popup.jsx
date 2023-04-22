@@ -6,7 +6,7 @@ import Modal from "@mui/material/Modal";
 import CloseIcon from "@mui/icons-material/Close";
 import CardMedia from "@mui/material/CardMedia";
 import { Card } from "@mui/material";
-import BasicTabs from "./TabComponent";
+import TabComponent from "./TabComponent";
 
 const modalStyle = {
   position: "absolute",
@@ -79,7 +79,7 @@ function Popup() {
               მოხვდი პოკერის ფესტივალზე მალტაში
             </Typography>
             {/* აქ იქნება Tabs component */}
-            <BasicTabs />
+            <TabComponent />
           </Box>
         </Box>
       </Modal>

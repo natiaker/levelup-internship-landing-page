@@ -1,99 +1,64 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
+import styled from "@emotion/styled";
+import { Box, Tabs, Tab } from "@mui/material";
+import { useState } from "react";
 
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role='tabpanel'
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
+function TabPanel({ children, value, index }) {
+  return <div>{value === index && <h1>{children}</h1>}</div>;
 }
 
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
-};
+const StyledTab = styled(Tab)(({ theme }) =>
+  theme.unstable_sx({
+    textTransform: "capitalize",
+    height: "77px",
+    borderRadius: "8px",
+  })
+);
 
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
+export default function TabComponent() {
+  const [value, setValue] = useState(0);
+  const handleTabs = (e, val) => {
+    setValue(val);
   };
-}
-
-export default function BasicTabs() {
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
   return (
-    <Box sx={{ width: "100%" }}>
-      <Box
+    <Box>
+      <Tabs
+        value={value}
+        onChange={handleTabs}
+        variant='fullWidth'
+        textColor='text.primary'
         sx={{
+          bgcolor: "background.secondary",
+          marginTop: "39px",
           borderRadius: "8px",
-          backgroundColor: "background.secondary",
+          "& button.Mui-selected": {
+            bgcolor: "background.active",
+          },
+          "& span": {
+            display: "none",
+          },
         }}
       >
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          textColor='text.primary'
-          indicatorColor='background.active'
-          variant='fullWidth'
-          aria-label='main tabs'
-          sx={{ marginTop: "39px" }}
-        >
-          <Tab
-            label='Cash Games'
-            {...a11yProps(0)}
-            sx={{ minHeight: "77px" }}
-          />
-          <Tab
-            label='Spring Series'
-            {...a11yProps(1)}
-          />
-          <Tab
-            label='Final Stage'
-            {...a11yProps(2)}
-          />
-        </Tabs>
-      </Box>
+        <StyledTab label='Cash Games' />
+        <StyledTab label='Spring Series' />
+        <StyledTab label='Final Stage' />
+      </Tabs>
       <TabPanel
         value={value}
         index={0}
       >
-        Item One
+        Item 1
       </TabPanel>
       <TabPanel
         value={value}
         index={1}
       >
-        Item Two
+        Item 2
       </TabPanel>
       <TabPanel
         value={value}
         index={2}
       >
-        Item Three
+        Item 3
       </TabPanel>
     </Box>
   );

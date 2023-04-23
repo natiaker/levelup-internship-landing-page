@@ -78,7 +78,6 @@ function Popup() {
             >
               მოხვდი პოკერის ფესტივალზე მალტაში
             </Typography>
-            {/* აქ იქნება Tabs component */}
             <TabComponent />
           </Box>
         </Box>

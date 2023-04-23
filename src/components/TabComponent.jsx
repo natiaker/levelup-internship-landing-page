@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Box, Tabs, Tab } from "@mui/material";
 import { useState } from "react";
+import CashGames from "./CashGames";
 
 function TabPanel({ children, value, index }) {
   return <div>{value === index && <h1>{children}</h1>}</div>;
@@ -46,7 +47,7 @@ export default function TabComponent() {
         value={value}
         index={0}
       >
-        Item 1
+        <CashGames title="1 ₾ ᲠᲔᲘᲙᲘ = 1 ᲥᲣᲚᲐᲡ"/>
       </TabPanel>
       <TabPanel
         value={value}

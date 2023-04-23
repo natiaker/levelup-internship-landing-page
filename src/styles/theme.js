@@ -10,6 +10,7 @@ const theme = createTheme({
       default: "#1c1d1e",
       secondary: "#2C3234",
       active: "#EF5A21",
+      cardItem: "#1E2122"
     },
     text: {
       primary: "#ffffff",

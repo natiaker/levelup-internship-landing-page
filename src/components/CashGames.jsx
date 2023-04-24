@@ -1,51 +1,63 @@
 import React from "react";
-import { Box, Card, CardContent, CardHeader, Typography } from "@mui/material";
-import HoldemTop20Card from "./HoldemTop20Card";
+import { Box, CardContent, Link, Typography } from "@mui/material";
+import LeaderboardCard from "./LeaderboardCard";
 import PrizesCard from "./PrizesCard";
+import { StyledMainCard, StyledTopBorder } from "../styles/ContentCardStyles";
+import SideLeaderboardCard from "./SideLeaderboardCard";
 
 const CashGames = ({ title }) => {
   return (
-    <Card
-      variant='outlined'
-      sx={{
-        bgcolor: "background.default",
-        borderTopLeftRadius: "15px",
-        borderTopRightRadius: "15px",
-        border: "4px solid #25292B",
-      }}
-    >
-      <CardHeader
-        title={title}
-        sx={{
-          bgcolor: "#25292B",
-          textAlign: "center",
-          height: "70px",
-          fontSize: "18px",
-        }}
-      />
-      <CardContent>
-        <Box
+    <>
+      <StyledMainCard variant='outlined'>
+        <Typography
           sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: "20px",
-            marginBottom: "20px",
+            bgcolor: "#25292B",
+            height: "70px",
+            textAlign: "center",
+            fontSize: "18px",
           }}
         >
-          <Typography sx={{ marginRight: "12px" }}>
-            ჰოლდემის TOP20 ლიდერბორდი
+          <StyledTopBorder />
+          {title}
+        </Typography>
+        <CardContent>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: "20px",
+              marginBottom: "20px",
+            }}
+          >
+            <Typography sx={{ marginRight: "12px" }}>
+              ჰოლდემის TOP20 ლიდერბორდი
+            </Typography>
+            <img
+              src={process.env.PUBLIC_URL + "/assets/example-icon.png"}
+              alt='info'
+            />
+          </Box>
+          <LeaderboardCard />
+          <PrizesCard />
+          <Typography sx={{ textAlign: "center", marginBottom: "22px" }}>
+            TOP20 ლიდერბორდი ჰოლდემში
           </Typography>
-          <img
-            src={process.env.PUBLIC_URL + "/assets/example-icon.png"}
-            alt='info'
-          />
-        </Box>
-
-        <HoldemTop20Card />
-        <PrizesCard />
-      </CardContent>
-    </Card>
+          <LeaderboardCard />
+          <PrizesCard />
+          <Typography sx={{ textAlign: "center" }}>
+            * ლიდერბორდის შედეგები განახლდება{" "}
+            <Link
+              href='#'
+              color='background.active'
+            >
+              პოკერის ლობიში
+            </Link>
+          </Typography>
+        </CardContent>
+      </StyledMainCard>
+      <SideLeaderboardCard />
+    </>
   );
 };
 

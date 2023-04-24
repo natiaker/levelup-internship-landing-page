@@ -19,7 +19,7 @@ const leaderboardStyle = {
   },
 };
 
-const HoldemTop20Card = () => {
+const LeaderboardCard = () => {
   return (
     <StyledCard>
       <Box
@@ -57,4 +57,4 @@ const HoldemTop20Card = () => {
   );
 };
 
-export default HoldemTop20Card;
+export default LeaderboardCard;

@@ -1,7 +1,8 @@
 import React from "react";
-import { Box, Card, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import LeaderBoardItems from "./LeaderBoardItems";
 import { TopHoldemData } from "../TopHoldemData";
+import { StyledCard } from "../styles/ContentCardStyles";
 
 const leaderboardStyle = {
   height: "390px",
@@ -20,14 +21,7 @@ const leaderboardStyle = {
 
 const HoldemTop20Card = () => {
   return (
-    <Card
-      sx={{
-        bgcolor: "#25292B",
-        padding: "32px 12px 20px 32px",
-        marginBottom: "24px",
-        borderRadius: "20px",
-      }}
-    >
+    <StyledCard>
       <Box
         sx={{
           display: "flex",
@@ -59,7 +53,7 @@ const HoldemTop20Card = () => {
           );
         })}
       </Box>
-    </Card>
+    </StyledCard>
   );
 };
 

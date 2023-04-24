@@ -1,11 +1,19 @@
 import React from "react";
-import { Box, CardContent, CardHeader, Typography } from "@mui/material";
-import { StyledCard } from "../styles/ContentCardStyles";
+import { Box, Card, CardContent, CardHeader, Typography } from "@mui/material";
 import HoldemTop20Card from "./HoldemTop20Card";
+import PrizesCard from "./PrizesCard";
 
 const CashGames = ({ title }) => {
   return (
-    <StyledCard variant='outlined'>
+    <Card
+      variant='outlined'
+      sx={{
+        bgcolor: "background.default",
+        borderTopLeftRadius: "15px",
+        borderTopRightRadius: "15px",
+        border: "4px solid #25292B",
+      }}
+    >
       <CardHeader
         title={title}
         sx={{
@@ -33,9 +41,11 @@ const CashGames = ({ title }) => {
             alt='info'
           />
         </Box>
+
         <HoldemTop20Card />
+        <PrizesCard />
       </CardContent>
-    </StyledCard>
+    </Card>
   );
 };
 

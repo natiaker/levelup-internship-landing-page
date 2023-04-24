@@ -11,6 +11,7 @@ import { Typography, Link, Box } from "@mui/material";
 import SideLeaderboardCard from "./SideLeaderboardCard";
 import Rules from "./Rules";
 import Offers from "./Offers";
+import DropDown from "./DropDown";
 
 const SpringSeries = () => {
   return (
@@ -21,7 +22,7 @@ const SpringSeries = () => {
           <StyledTopBorder />
           ᲛᲝᲮᲕᲓᲘ TOP20 ᲚᲘᲓᲔᲠᲑᲝᲠᲓᲨᲘ ᲢᲣᲠᲜᲘᲠᲔᲑᲖᲔ ᲓᲐᲒᲠᲝᲕᲔᲑᲣᲚᲘ ᲥᲣᲚᲔᲑᲘᲗ
         </StyledMainTitle>
-        {/* <ArrowDropDown /> */}
+        <DropDown />
         <Box
           px={3}
           pb={3}

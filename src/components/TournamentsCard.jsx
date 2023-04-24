@@ -79,32 +79,37 @@ const TournamentsCard = () => {
         >
           ტურნირების სრული განრიგის სანახავად გადადი პოკერის ლობიში
         </Typography>
+        <Box
+          sx={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
+          <img
+            src={process.env.PUBLIC_URL + "/assets/promo-left-img.png"}
+            alt='promo-left'
+          />
+          <img
+            src={process.env.PUBLIC_URL + "/assets/promo-right-img.png"}
+            alt='promo-right'
+          />
+        </Box>
         <Button
           variant='contained'
-          sx={{ bgcolor: "background.active", mt: 2 }}
+          sx={{
+            bgcolor: "background.active",
+            mt: 2,
+            cursor: "pointer",
+            "&:hover": { bgcolor: "background.active" },
+          }}
         >
           პოკერის ლობი
         </Button>
       </CardContent>
-      <Box
-        sx={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          right: 0,
-          display: "flex",
-          justifyContent: "space-between",
-        }}
-      >
-        <img
-          src={process.env.PUBLIC_URL + "/assets/promo-left-img.png"}
-          alt='promo-left'
-        />
-        <img
-          src={process.env.PUBLIC_URL + "/assets/promo-right-img.png"}
-          alt='promo-right'
-        />
-      </Box>
     </StyledMainCard>
   );
 };

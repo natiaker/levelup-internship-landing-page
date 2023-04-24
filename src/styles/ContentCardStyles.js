@@ -1,5 +1,16 @@
 import styled from "@emotion/styled";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+
+export const StyledMainTitle = styled(Typography)(({ theme }) =>
+  theme.unstable_sx({
+    bgcolor: "#25292B",
+    height: "70px",
+    textAlign: "center",
+    fontSize: "18px",
+    borderTopLeftRadius: "15px",
+    borderTopRightRadius: "15px",
+  })
+);
 
 export const StyledCard = styled(Box)(({ theme }) =>
   theme.unstable_sx({

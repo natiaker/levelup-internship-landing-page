@@ -1,10 +1,11 @@
+import { Box } from "@mui/material";
 import Popup from "./components/Popup";
 
 function App() {
   return (
-    <div>
+    <Box>
       <Popup />
-    </div>
+    </Box>
   );
 }
 

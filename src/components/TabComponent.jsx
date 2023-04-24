@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Box, Tabs, Tab } from "@mui/material";
 import { useState } from "react";
 import CashGames from "./CashGames";
+import SpringSeries from "./SpringSeries";
 
 function TabPanel({ children, value, index }) {
   return <div>{value === index && <h1>{children}</h1>}</div>;
@@ -12,6 +13,7 @@ const StyledTab = styled(Tab)(({ theme }) =>
     textTransform: "capitalize",
     height: "77px",
     borderRadius: "8px",
+    color: "text.primary",
   })
 );
 
@@ -26,13 +28,13 @@ export default function TabComponent() {
         value={value}
         onChange={handleTabs}
         variant='fullWidth'
-        textColor='text.primary'
         sx={{
           bgcolor: "background.secondary",
           marginTop: "39px",
           borderRadius: "8px",
           "& button.Mui-selected": {
             bgcolor: "background.active",
+            color: "text.primary",
           },
           "& span": {
             display: "none",
@@ -47,13 +49,13 @@ export default function TabComponent() {
         value={value}
         index={0}
       >
-        <CashGames title="1 ₾ ᲠᲔᲘᲙᲘ = 1 ᲥᲣᲚᲐᲡ"/>
+        <CashGames />
       </TabPanel>
       <TabPanel
         value={value}
         index={1}
       >
-        Item 2
+        <SpringSeries />
       </TabPanel>
       <TabPanel
         value={value}

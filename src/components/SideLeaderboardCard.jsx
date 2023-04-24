@@ -21,7 +21,6 @@ const SideLeaderboardCard = () => {
         ᲚᲘᲓᲔᲠᲑᲝᲠᲓᲘ
       </Typography>
       <Typography
-        variant='body1'
         mt={1}
         sx={{ fontSize: "14px" }}
       >

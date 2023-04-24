@@ -16,8 +16,8 @@ const LeaderBoardItems = ({ place, voucher, prize, icon }) => {
         marginRight: "16px",
       }}
     >
-      <div
-        style={{
+      <Box
+        sx={{
           backgroundColor: "#2C3234",
           width: "28px",
           height: "28px",
@@ -29,7 +29,7 @@ const LeaderBoardItems = ({ place, voucher, prize, icon }) => {
         }}
       >
         <Typography>{place}</Typography>
-      </div>
+      </Box>
       <Typography>{voucher}</Typography>
       <Typography
         sx={{

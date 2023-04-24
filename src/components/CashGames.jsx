@@ -2,28 +2,22 @@ import React from "react";
 import { Box, CardContent, Link, Typography } from "@mui/material";
 import LeaderboardCard from "./LeaderboardCard";
 import PrizesCard from "./PrizesCard";
-import { StyledMainCard, StyledTopBorder } from "../styles/ContentCardStyles";
+import {
+  StyledMainCard,
+  StyledMainTitle,
+  StyledTopBorder,
+} from "../styles/ContentCardStyles";
 import SideLeaderboardCard from "./SideLeaderboardCard";
 import Rules from "./Rules";
 import Offers from "./Offers";
 
-const CashGames = ({ title }) => {
+const CashGames = () => {
   return (
     <>
       <StyledMainCard variant='outlined'>
-        <Typography
-          sx={{
-            bgcolor: "#25292B",
-            height: "70px",
-            textAlign: "center",
-            fontSize: "18px",
-            borderTopLeftRadius: "15px",
-            borderTopRightRadius: "15px",
-          }}
-        >
-          <StyledTopBorder />
-          {title}
-        </Typography>
+        <StyledMainTitle>
+          <StyledTopBorder />1 ₾ ᲠᲔᲘᲙᲘ = 1 ᲥᲣᲚᲐᲡ
+        </StyledMainTitle>
         <CardContent>
           <Box
             sx={{

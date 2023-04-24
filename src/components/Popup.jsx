@@ -20,9 +20,9 @@ const modalStyle = {
   bgcolor: "background.default",
   borderRadius: "10px",
   overflowY: "scroll",
-  "-ms-overflow-style": "none" /* IE and Edge */,
-  "scrollbar-width": "none" /* Firefox */,
-  "&::-webkit-scrollbar": {
+  msOverflowStyle: "none" /* IE and Edge */,
+  scrollbarWidth: "none" /* Firefox */,
+  "&::webkitScrollbar": {
     display: "none",
   },
 };
@@ -33,7 +33,7 @@ function Popup() {
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
+    <>
       <Button onClick={handleOpen}>Open modal</Button>
       <Modal
         open={open}
@@ -73,11 +73,7 @@ function Popup() {
               p: "43px",
             }}
           >
-            <Typography
-              id='modal-modal-title'
-              variant='h6'
-              component='h2'
-            >
+            <Typography id='modal-modal-title'>
               მოიპოვე მრავალფეროვანი პრიზები და 10 საგზურიდან ერთ-ერთი
             </Typography>
             <Typography
@@ -90,7 +86,7 @@ function Popup() {
           </Box>
         </Box>
       </Modal>
-    </div>
+    </>
   );
 }
 

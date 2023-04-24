@@ -1,20 +1,23 @@
 import styled from "@emotion/styled";
 import { Box } from "@mui/material";
 
-export const StyledCard = styled(Box)({
-  backgroundColor: "#25292B",
-  padding: "32px 12px 20px 32px",
-  marginBottom: "24px",
-  borderRadius: "20px",
-});
+export const StyledCard = styled(Box)(({ theme }) =>
+  theme.unstable_sx({
+    backgroundColor: "#25292B",
+    padding: "32px 12px 20px 32px",
+    marginBottom: "24px",
+    borderRadius: "20px",
+  })
+);
 
-export const StyledMainCard = styled(Box)({
-  bgcolor: "background.default",
-  borderTopLeftRadius: "15px",
-  borderTopRightRadius: "15px",
-  border: "4px solid #25292B",
-  borderTop: "none",
-});
+export const StyledMainCard = styled(Box)(({ theme }) =>
+  theme.unstable_sx({
+    bgcolor: "background.default",
+    borderRadius: "15px",
+    border: "4px solid #25292B",
+    borderTop: "none",
+  })
+);
 
 export const StyledTopBorder = styled(Box)(({ theme }) =>
   theme.unstable_sx({

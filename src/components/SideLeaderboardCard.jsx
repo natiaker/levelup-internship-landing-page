@@ -10,7 +10,7 @@ const SideLeaderboardCard = () => {
         marginTop: "20px",
         backgroundColor: "#25292B",
         padding: "0px 120px 5px",
-        marginBottom: "24px",
+        marginBottom: "55px",
         borderRadius: "20px",
         textAlign: "center",
       }}

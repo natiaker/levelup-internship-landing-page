@@ -13,10 +13,18 @@ const modalStyle = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
+  marginTop: "30px",
   width: "940px",
+  height: "100vh",
   color: "text.primary",
   bgcolor: "background.default",
   borderRadius: "10px",
+  overflowY: "scroll",
+  "-ms-overflow-style": "none" /* IE and Edge */,
+  "scrollbar-width": "none" /* Firefox */,
+  "&::-webkit-scrollbar": {
+    display: "none",
+  },
 };
 
 function Popup() {

@@ -12,6 +12,8 @@ const LeaderBoardItems = ({ place, voucher, prize, icon }) => {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
+        marginBottom: "6px",
+        marginRight: "16px",
       }}
     >
       <div
@@ -23,6 +25,7 @@ const LeaderBoardItems = ({ place, voucher, prize, icon }) => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          boxShadow: "#2C3234 0px 0px 5px",
         }}
       >
         <Typography>{place}</Typography>
@@ -35,11 +38,13 @@ const LeaderBoardItems = ({ place, voucher, prize, icon }) => {
           alignItems: "center",
         }}
       >
-        <img
-          src={icon}
-          alt="travel-icon"
-          style={{ width: "20px", height: "20px", marginLeft: "7px" }}
-        />
+        {icon && (
+          <img
+            src={icon}
+            alt=''
+            style={{ width: "20px", height: "20px", marginRight: "7px" }}
+          />
+        )}
         {prize}
       </Typography>
     </Box>

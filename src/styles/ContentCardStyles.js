@@ -23,7 +23,7 @@ export const StyledCard = styled(Box)(({ theme }) =>
 
 export const StyledMainCard = styled(Box)(({ theme }) =>
   theme.unstable_sx({
-    bgcolor: "background.default",
+    bgcolor: "#171718",
     borderRadius: "15px",
     border: "4px solid #25292B",
     borderTop: "none",
@@ -34,7 +34,7 @@ export const StyledTopBorder = styled(Box)(({ theme }) =>
   theme.unstable_sx({
     margin: "0 auto 18px",
     backgroundColor: "background.active",
-    width: "251px",
+    width: "33%",
     height: "5px",
     borderBottomLeftRadius: "4px",
     borderBottomRightRadius: "4px",

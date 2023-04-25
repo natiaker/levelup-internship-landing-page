@@ -44,7 +44,7 @@ const EverydayTournaments = () => {
         <Box position="relative" float="right">
           <img
             src={process.env.PUBLIC_URL + "./assets/tournament-bg.png"}
-            alt="card1"
+            alt="card2"
             display="inline-block"
           />
           <Box position="absolute" top="30px" left="30px" display="flex">
@@ -76,7 +76,7 @@ const EverydayTournaments = () => {
         <Box position="relative">
           <img
             src={process.env.PUBLIC_URL + "./assets/main-bg.png"}
-            alt="card1"
+            alt="card3"
           />
           <Box position="absolute" top="30px" left="30%" display="flex">
             <Box marginRight="40px">

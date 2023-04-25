@@ -39,7 +39,6 @@ const SpringSeries = () => {
           </Typography>
         </Box>
       </StyledMainCard>
-      {/* ყოველდღიური ტურნირენი და სატელიტები */}
       <EverydayTournaments />
       <SideLeaderboardCard />
       <Typography sx={{ marginBottom: "22px" }}>წესები და პირობები</Typography>

@@ -22,7 +22,7 @@ const modalStyle = {
   overflowY: "scroll",
   msOverflowStyle: "none" /* IE and Edge */,
   scrollbarWidth: "none" /* Firefox */,
-  "&::webkitScrollbar": {
+  "&::-webkit-scrollbar": {
     display: "none",
   },
 };
@@ -38,8 +38,8 @@ function Popup() {
       <Modal
         open={open}
         onClose={handleClose}
-        aria-labelledby='modal-modal-title'
-        aria-describedby='modal-modal-description'
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
       >
         <Box sx={modalStyle}>
           <Box
@@ -63,9 +63,9 @@ function Popup() {
           </Box>
           <Card>
             <CardMedia
-              component='img'
+              component="img"
               image={process.env.PUBLIC_URL + "/assets/banner.jpg"}
-              alt='banner'
+              alt="banner"
             />
           </Card>
           <Box
@@ -73,13 +73,10 @@ function Popup() {
               p: "43px",
             }}
           >
-            <Typography id='modal-modal-title'>
+            <Typography id="modal-modal-title">
               მოიპოვე მრავალფეროვანი პრიზები და 10 საგზურიდან ერთ-ერთი
             </Typography>
-            <Typography
-              id='modal-modal-description'
-              sx={{ mt: 2 }}
-            >
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
               მოხვდი პოკერის ფესტივალზე მალტაში
             </Typography>
             <TabComponent />

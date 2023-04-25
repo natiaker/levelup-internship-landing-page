@@ -12,46 +12,35 @@ import SideLeaderboardCard from "./SideLeaderboardCard";
 import Rules from "./Rules";
 import Offers from "./Offers";
 import DropDown from "./DropDown";
+import EverydayTournaments from "./EverydayTournaments";
 
 const SpringSeries = () => {
   return (
     <>
       <TournamentsCard />
-      <StyledMainCard marginTop='27px'>
-        <StyledMainTitle marginBottom='20px'>
+      <StyledMainCard marginTop="27px">
+        <StyledMainTitle marginBottom="20px">
           <StyledTopBorder />
           ᲛᲝᲮᲕᲓᲘ TOP20 ᲚᲘᲓᲔᲠᲑᲝᲠᲓᲨᲘ ᲢᲣᲠᲜᲘᲠᲔᲑᲖᲔ ᲓᲐᲒᲠᲝᲕᲔᲑᲣᲚᲘ ᲥᲣᲚᲔᲑᲘᲗ
         </StyledMainTitle>
         <DropDown />
-        <Box
-          px={3}
-          pb={3}
-        >
+        <Box px={3} pb={3}>
           <LeaderboardCard />
           <PrizesCard />
-          <Typography
-            textAlign='center'
-            fontSize='14px'
-            marginBottom='12px'
-          >
+          <Typography textAlign="center" fontSize="14px" marginBottom="12px">
             * ლიდერბორდის შედეგები განახლდება{" "}
-            <Link
-              href='#'
-              color='background.active'
-            >
+            <Link href="#" color="background.active">
               პოკერის ლობიში
             </Link>
           </Typography>
-          <Typography
-            fontSize='14px'
-            textAlign='center'
-          >
+          <Typography fontSize="14px" textAlign="center">
             * სატურნირო ლიდერბორდის ქულების დათვლაში არ მონაწილეობს ფრიროლები და
             სატელიტები
           </Typography>
         </Box>
       </StyledMainCard>
       {/* ყოველდღიური ტურნირენი და სატელიტები */}
+      <EverydayTournaments />
       <SideLeaderboardCard />
       <Typography sx={{ marginBottom: "22px" }}>წესები და პირობები</Typography>
       <Rules />

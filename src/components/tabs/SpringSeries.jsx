@@ -1,18 +1,18 @@
 import React from "react";
-import TournamentsCard from "./TournamentsCard";
+import TournamentsCard from "./springSeries/TournamentsCard";
 import {
   StyledMainCard,
   StyledMainTitle,
   StyledTopBorder,
-} from "../styles/ContentCardStyles";
-import LeaderboardCard from "./LeaderboardCard";
-import PrizesCard from "./PrizesCard";
+} from "../../styles/ContentCardStyles";
+import LeaderboardCard from "./commonComponents/LeaderboardCard";
+import PrizesCard from "./commonComponents/PrizesCard";
 import { Typography, Link, Box } from "@mui/material";
-import SideLeaderboardCard from "./SideLeaderboardCard";
-import Rules from "./Rules";
-import Offers from "./Offers";
-import DropDown from "./DropDown";
-import EverydayTournaments from "./EverydayTournaments";
+import SideLeaderboardCard from "./commonComponents/SideLeaderboardCard";
+import Rules from "./commonComponents/Rules";
+import Offers from "./commonComponents/Offers";
+import DropDown from "./springSeries/DropDown";
+import EverydayTournaments from "./springSeries/EverydayTournaments";
 
 const SpringSeries = () => {
   return (

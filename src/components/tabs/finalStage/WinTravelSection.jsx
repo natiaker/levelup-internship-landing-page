@@ -3,7 +3,7 @@ import {
   StyledMainCard,
   StyledMainTitle,
   StyledTopBorder,
-} from "../styles/ContentCardStyles";
+} from "../../../styles/ContentCardStyles";
 import { Box, Typography } from "@mui/material";
 
 const boxStyle = {

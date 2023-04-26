@@ -1,15 +1,15 @@
 import React from "react";
 import { Box, CardContent, Link, Typography } from "@mui/material";
-import LeaderboardCard from "./LeaderboardCard";
-import PrizesCard from "./PrizesCard";
+import LeaderboardCard from "./commonComponents/LeaderboardCard";
+import PrizesCard from "./commonComponents/PrizesCard";
 import {
   StyledMainCard,
   StyledMainTitle,
   StyledTopBorder,
-} from "../styles/ContentCardStyles";
-import SideLeaderboardCard from "./SideLeaderboardCard";
-import Rules from "./Rules";
-import Offers from "./Offers";
+} from "../../styles/ContentCardStyles";
+import SideLeaderboardCard from "./commonComponents/SideLeaderboardCard";
+import Rules from "./commonComponents/Rules";
+import Offers from "./commonComponents/Offers";
 
 const CashGames = () => {
   return (

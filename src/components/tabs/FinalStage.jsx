@@ -1,12 +1,12 @@
 import React from "react";
-import { StyledMainCard } from "../styles/ContentCardStyles";
+import { StyledMainCard } from "../../styles/ContentCardStyles";
 import { Box, Typography } from "@mui/material";
 import styled from "@emotion/styled";
-import ACategoryTravelCard from "./ACategoryTravelCard";
-import WinTravelSection from "./WinTravelSection";
-import MysticalKey from "./MysticalKey";
-import Rules from "./Rules";
-import Offers from "./Offers";
+import ACategoryTravelCard from "./finalStage/ACategoryTravelCard";
+import WinTravelSection from "./finalStage/WinTravelSection";
+import MysticalKey from "./finalStage/MysticalKey";
+import Rules from "./commonComponents/Rules";
+import Offers from "./commonComponents/Offers";
 
 const StyledBorder = styled(Box)(({ theme }) =>
   theme.unstable_sx({

@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import { StyledTopBorder } from "../styles/ContentCardStyles";
+import { StyledTopBorder } from "../../../styles/ContentCardStyles";
 
 const SideLeaderboardCard = () => {
   return (

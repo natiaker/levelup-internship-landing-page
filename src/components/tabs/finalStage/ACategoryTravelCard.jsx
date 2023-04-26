@@ -3,7 +3,7 @@ import {
   StyledMainCard,
   StyledMainTitle,
   StyledTopBorder,
-} from "../styles/ContentCardStyles";
+} from "../../../styles/ContentCardStyles";
 import { Box, Typography } from "@mui/material";
 
 const travelData = [
@@ -34,69 +34,48 @@ const ACategoryTravelCard = ({ custom }) => {
     <StyledMainCard
       width={{ xs: "100%", md: "31%" }}
       mb={2}
-      bgcolor='#1c1d1e !important'
-      minHeight='383px'
+      bgcolor="#1c1d1e !important"
+      minHeight="383px"
     >
       <StyledMainTitle>
         <StyledTopBorder />
-        <Typography
-          fontSize={{ xs: "14px", md: "16px" }}
-          fontWeight='600'
-        >
+        <Typography fontSize={{ xs: "14px", md: "16px" }} fontWeight="600">
           A კატეგორიის საგზურში შედის
         </Typography>
       </StyledMainTitle>
       {custom
         ? travelData
             .filter((item, index) => index !== 2)
-            .map(item => {
+            .map((item) => {
               return (
-                <Box
-                  px={1}
-                  py={0.5}
-                >
+                <Box px={1} py={0.5}>
                   <Box
-                    display='flex'
-                    alignItems='center'
-                    bgcolor='#171718'
+                    display="flex"
+                    alignItems="center"
+                    bgcolor="#171718"
                     p={1}
-                    borderRadius='10px'
+                    borderRadius="10px"
                   >
-                    <img
-                      src={item.url}
-                      alt='icon'
-                    />
-                    <Typography
-                      fontSize='13px'
-                      ml={1.5}
-                    >
+                    <img src={item.url} alt="icon" />
+                    <Typography fontSize="13px" ml={1.5}>
                       {item.title}
                     </Typography>
                   </Box>
                 </Box>
               );
             })
-        : travelData.map(item => {
+        : travelData.map((item) => {
             return (
-              <Box
-                px={1}
-                py={0.5}
-              >
+              <Box px={1} py={0.5}>
                 <Box
-                  display='flex'
-                  alignItems='center'
-                  bgcolor='#171718'
+                  display="flex"
+                  alignItems="center"
+                  bgcolor="#171718"
                   p={1}
-                  borderRadius='10px'
+                  borderRadius="10px"
                 >
-                  <img
-                    src={item.url}
-                    alt='icon'
-                  />
-                  <Typography
-                    fontSize='14px'
-                    ml={1.5}
-                  >
+                  <img src={item.url} alt="icon" />
+                  <Typography fontSize="14px" ml={1.5}>
                     {item.title}
                   </Typography>
                 </Box>

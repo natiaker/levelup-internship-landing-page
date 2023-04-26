@@ -3,7 +3,7 @@ import {
   StyledMainCard,
   StyledMainTitle,
   StyledTopBorder,
-} from "../styles/ContentCardStyles";
+} from "../../../styles/ContentCardStyles";
 import { Box, Button, CardContent, Typography } from "@mui/material";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import styled from "@emotion/styled";

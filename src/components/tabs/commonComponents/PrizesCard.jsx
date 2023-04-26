@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledCard } from "../styles/ContentCardStyles";
+import { StyledCard } from "../../../styles/ContentCardStyles";
 import { Box, Typography } from "@mui/material";
 import styled from "@emotion/styled";
 import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";

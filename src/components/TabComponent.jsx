@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 import { Box, Tabs, Tab } from "@mui/material";
 import { useState } from "react";
-import CashGames from "./CashGames";
-import SpringSeries from "./SpringSeries";
-import FinalStage from "./FinalStage";
+import CashGames from "./tabs/CashGames";
+import SpringSeries from "./tabs/SpringSeries";
+import FinalStage from "./tabs/FinalStage";
 
 function TabPanel({ children, value, index }) {
   return <div>{value === index && <h1>{children}</h1>}</div>;
@@ -29,7 +29,7 @@ export default function TabComponent() {
       <Tabs
         value={value}
         onChange={handleTabs}
-        variant='fullWidth'
+        variant="fullWidth"
         sx={{
           bgcolor: "background.secondary",
           marginTop: "39px",
@@ -43,26 +43,17 @@ export default function TabComponent() {
           },
         }}
       >
-        <StyledTab label='Cash Games' />
-        <StyledTab label='Spring Series' />
-        <StyledTab label='Final Stage' />
+        <StyledTab label="Cash Games" />
+        <StyledTab label="Spring Series" />
+        <StyledTab label="Final Stage" />
       </Tabs>
-      <TabPanel
-        value={value}
-        index={0}
-      >
+      <TabPanel value={value} index={0}>
         <CashGames />
       </TabPanel>
-      <TabPanel
-        value={value}
-        index={1}
-      >
+      <TabPanel value={value} index={1}>
         <SpringSeries />
       </TabPanel>
-      <TabPanel
-        value={value}
-        index={2}
-      >
+      <TabPanel value={value} index={2}>
         <FinalStage />
       </TabPanel>
     </Box>

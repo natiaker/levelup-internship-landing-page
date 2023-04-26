@@ -3,10 +3,10 @@ import {
   StyledMainCard,
   StyledMainTitle,
   StyledTopBorder,
-} from "../styles/ContentCardStyles";
+} from "../../../styles/ContentCardStyles";
 import { Box, Typography } from "@mui/material";
 import SingleMysticalKey from "./SingleMysticalKey";
-import { mysticalKeyData } from "../mysticalKeyData";
+import { mysticalKeyData } from "../../../data/mysticalKeyData";
 
 const boardStyle = {
   bgcolor: { xs: "transparent", md: "#1E2122" },

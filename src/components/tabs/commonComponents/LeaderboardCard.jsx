@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import LeaderBoardItems from "./LeaderBoardItems";
-import { TopHoldemData } from "../TopHoldemData";
-import { StyledCard } from "../styles/ContentCardStyles";
+import { TopHoldemData } from "../../../data/TopHoldemData";
+import { StyledCard } from "../../../styles/ContentCardStyles";
 
 const leaderboardStyle = {
   height: "390px",

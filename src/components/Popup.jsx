@@ -57,7 +57,14 @@ function Popup() {
       >
         <Box sx={modalStyle}>
           <SignupSection />
-          <div style={{ display: "flex", position: "sticky", top: 0 }}>
+          <div
+            style={{
+              display: "flex",
+              position: "sticky",
+              top: 0,
+              zIndex: 2000,
+            }}
+          >
             <Box
               display={{ xs: "none", sm: "inline-flex" }}
               alignItems="center"

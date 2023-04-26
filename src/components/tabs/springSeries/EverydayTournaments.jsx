@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledMainCard } from "../styles/ContentCardStyles";
+import { StyledMainCard } from "../../../styles/ContentCardStyles";
 import { Box, Typography } from "@mui/material";
 
 const EverydayTournaments = () => {

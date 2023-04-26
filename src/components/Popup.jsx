@@ -14,14 +14,15 @@ const modalStyle = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   marginTop: "30px",
-  width: "940px",
+  minWidth: { xs: "320px", sm: "500px", md: "600px" },
+  width: { xs: "100%", sm: "90%", md: "80%", lg: "60%" },
   height: "100vh",
   color: "text.primary",
   bgcolor: "background.default",
   borderRadius: "10px",
   overflowY: "scroll",
-  msOverflowStyle: "none" /* IE and Edge */,
-  scrollbarWidth: "none" /* Firefox */,
+  msOverflowStyle: "none",
+  scrollbarWidth: "none",
   "&::-webkit-scrollbar": {
     display: "none",
   },
@@ -52,6 +53,7 @@ function Popup() {
               borderRadius: "50%",
               cursor: "pointer",
               bgcolor: "background.default",
+              display: { xs: "none", sm: "block" },
             }}
             onClick={handleClose}
           >
@@ -70,7 +72,7 @@ function Popup() {
           </Card>
           <Box
             sx={{
-              p: "43px",
+              p: { xs: "16px", sm: "43px" },
             }}
           >
             <Typography id="modal-modal-title">

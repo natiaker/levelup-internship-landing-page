@@ -27,21 +27,20 @@ const LeaderboardCard = () => {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          margin: "20px 152px 20px 10px ",
+          margin: {
+            xs: "20px 50px 20px 10px",
+            sm: "20px 100px 20px 10px",
+            md: "20px 152px 20px 10px ",
+          },
+          color: "#7D7D7D",
         }}
       >
         <Typography>ადგილი</Typography>
-        <Typography>
-          <img
-            src=''
-            alt='voucher-icon'
-          />
-          ვაუჩერი
-        </Typography>
+        <Typography>ვაუჩერი</Typography>
         <Typography>პრიზი</Typography>
       </Box>
       <Box sx={leaderboardStyle}>
-        {TopHoldemData.map(item => {
+        {TopHoldemData.map((item) => {
           return (
             <LeaderBoardItems
               key={item.place}

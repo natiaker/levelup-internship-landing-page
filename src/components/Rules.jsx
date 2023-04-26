@@ -10,13 +10,14 @@ import styled from "@emotion/styled";
 
 const StyledText = styled(Typography)({
   fontSize: "15px",
-  padding: "7px 25px",
+  padding: { xs: "7px 0", sm: "7px 25px" },
+  color: "#BBBBBB",
 });
 
 const Rules = () => {
   const [expanded, setExpanded] = useState(false);
 
-  const handleChange = panel => (event, isExpanded) => {
+  const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
 
@@ -32,8 +33,8 @@ const Rules = () => {
         }}
       >
         <AccordionSummary
-          id='panel1-header'
-          aria-controls='panel1-content'
+          id="panel1-header"
+          aria-controls="panel1-content"
           expandIcon={
             <ExpandMoreIcon sx={{ color: "white", opacity: "0.6" }} />
           }
@@ -58,8 +59,8 @@ const Rules = () => {
         }}
       >
         <AccordionSummary
-          id='panel2-header'
-          aria-controls='panel2-content'
+          id="panel2-header"
+          aria-controls="panel2-content"
           expandIcon={
             <ExpandMoreIcon sx={{ color: "white", opacity: "0.6" }} />
           }
@@ -86,8 +87,8 @@ const Rules = () => {
         }}
       >
         <AccordionSummary
-          id='panel3-header'
-          aria-controls='panel3-content'
+          id="panel3-header"
+          aria-controls="panel3-content"
           expandIcon={
             <ExpandMoreIcon sx={{ color: "white", opacity: "0.6" }} />
           }

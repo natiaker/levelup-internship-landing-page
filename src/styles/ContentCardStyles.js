@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
-export const StyledMainTitle = styled(Typography)(({ theme }) =>
+export const StyledMainTitle = styled(Box)(({ theme }) =>
   theme.unstable_sx({
-    bgcolor: "#25292B",
+    bgcolor: "#2C3234", 
     height: "70px",
     textAlign: "center",
     fontSize: "18px",
@@ -15,7 +15,7 @@ export const StyledMainTitle = styled(Typography)(({ theme }) =>
 export const StyledCard = styled(Box)(({ theme }) =>
   theme.unstable_sx({
     backgroundColor: "#25292B",
-    padding: "32px 12px 20px 32px",
+    padding: {xs: "0",sm:"32px 12px 20px 32px"},
     marginBottom: "24px",
     borderRadius: "20px",
   })
@@ -23,7 +23,7 @@ export const StyledCard = styled(Box)(({ theme }) =>
 
 export const StyledMainCard = styled(Box)(({ theme }) =>
   theme.unstable_sx({
-    bgcolor: "#171718",
+    bgcolor: {sm: "#171718", xs: "#25292B"},
     borderRadius: "15px",
     border: "4px solid #25292B",
     borderTop: "none",

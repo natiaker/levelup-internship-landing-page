@@ -14,7 +14,7 @@ import Offers from "./Offers";
 const CashGames = () => {
   return (
     <>
-      <StyledMainCard variant='outlined'>
+      <StyledMainCard variant="outlined">
         <StyledMainTitle>
           <StyledTopBorder />1 ₾ ᲠᲔᲘᲙᲘ = 1 ᲥᲣᲚᲐᲡ
         </StyledMainTitle>
@@ -28,34 +28,43 @@ const CashGames = () => {
               marginBottom: "20px",
             }}
           >
-            <Typography sx={{ marginRight: "12px" }}>
+            <Typography
+              sx={{ marginRight: "12px", fontSize: { xs: "13px", sm: "16px" } }}
+            >
               ჰოლდემის TOP20 ლიდერბორდი
             </Typography>
             <img
               src={process.env.PUBLIC_URL + "/assets/example-icon.png"}
-              alt='info'
+              alt="info"
             />
           </Box>
           <LeaderboardCard />
           <PrizesCard />
-          <Typography sx={{ textAlign: "center", marginBottom: "22px" }}>
+          <Typography
+            sx={{
+              textAlign: "center",
+              marginBottom: "22px",
+              fontSize: { xs: "13px", sm: "16px" },
+            }}
+          >
             TOP20 ლიდერბორდი ჰოლდემში
           </Typography>
           <LeaderboardCard />
           <PrizesCard />
           <Typography sx={{ textAlign: "center" }}>
             * ლიდერბორდის შედეგები განახლდება{" "}
-            <Link
-              href='#'
-              color='background.active'
-            >
+            <Link href="#" color="background.active">
               პოკერის ლობიში
             </Link>
           </Typography>
         </CardContent>
       </StyledMainCard>
       <SideLeaderboardCard />
-      <Typography sx={{ marginBottom: "22px" }}>წესები და პირობები</Typography>
+      <Typography
+        sx={{ marginBottom: "22px", fontSize: { xs: "16px", sm: "18px" } }}
+      >
+        წესები და პირობები
+      </Typography>
       <Rules />
       <Typography sx={{ marginTop: "55px", marginBottom: "32px" }}>
         მსგავსი აქციები

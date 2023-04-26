@@ -8,19 +8,19 @@ const LeaderBoardItems = ({ place, voucher, prize, icon }) => {
         bgcolor: "background.cardItem",
         border: "2px solid #2C3234",
         borderRadius: "50px",
-        padding: "14px 37px 14px 20px",
+        padding: { xs: "12px", sm: "14px 37px 14px 20px" },
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
         marginBottom: "6px",
-        marginRight: "16px",
+        marginRight: { xs: "8px", sm: "16px" },
       }}
     >
       <Box
         sx={{
           backgroundColor: "#2C3234",
-          width: "28px",
-          height: "28px",
+          width: { xs: "22px", sm: "28px" },
+          height: { xs: "22px", sm: "28px" },
           borderRadius: "50%",
           display: "flex",
           justifyContent: "center",
@@ -30,19 +30,26 @@ const LeaderBoardItems = ({ place, voucher, prize, icon }) => {
       >
         <Typography>{place}</Typography>
       </Box>
-      <Typography>{voucher}</Typography>
+      <Typography fontSize={{ xs: "10px", sm: "13px" }}>{voucher}</Typography>
       <Typography
         sx={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          fontSize: { xs: "10px", sm: "13px" },
+          textAlign: "center",
+          maxWidth: { xs: "80px", sm: "unset" },
         }}
       >
         {icon && (
           <img
             src={icon}
-            alt=''
-            style={{ width: "20px", height: "20px", marginRight: "7px" }}
+            alt=""
+            style={{
+              width: "20px",
+              height: "20px",
+              marginRight: "7px",
+            }}
           />
         )}
         {prize}

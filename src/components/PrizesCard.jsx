@@ -4,23 +4,25 @@ import { Box, Typography } from "@mui/material";
 import styled from "@emotion/styled";
 import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 
-const CardItem = styled(Box)({
-  backgroundColor: "#202324",
-  borderTopLeftRadius: "12px",
-  borderTopRightRadius: "12px",
-  display: "flex",
-  justifyContent: "flex-start",
-  alignItems: "center",
-  height: "72px",
-  borderRadius: "12px",
-  marginBottom: "10px",
-  img: {
-    width: "40px",
-    height: "40px",
-    marginRight: "16px",
-    marginLeft: "16px",
-  },
-});
+const CardItem = styled(Box)(({ theme }) =>
+  theme.unstable_sx({
+    backgroundColor: { xs: "#2C3234", sm: "#202324" },
+    borderTopLeftRadius: "12px",
+    borderTopRightRadius: "12px",
+    display: "flex",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    height: "72px",
+    borderRadius: "12px",
+    marginBottom: "10px",
+    img: {
+      width: { xs: "35px", sm: "40px" },
+      height: { xs: "35px", sm: "40px" },
+      marginRight: "16px",
+      marginLeft: "16px",
+    },
+  })
+);
 
 const StyledBorder = styled(Box)(({ theme }) =>
   theme.unstable_sx({
@@ -40,17 +42,19 @@ const PrizesCard = () => {
         <StyledBorder />
         <img
           src={process.env.PUBLIC_URL + "/assets/travel-icon-sm.png"}
-          alt='travel-icon'
+          alt="travel-icon"
         />
-        <Typography>The Festival in Malta-ს საგზური</Typography>
+        <Typography sx={{ fontSize: { xs: "13px", sm: "16px" } }}>
+          The Festival in Malta-ს საგზური
+        </Typography>
       </CardItem>
       <CardItem>
         <StyledBorder />
         <img
           src={process.env.PUBLIC_URL + "/assets/ticket-icon-sm.png"}
-          alt='ticket-icon'
+          alt="ticket-icon"
         />
-        <Typography sx={{ maxWidth: "600px" }}>
+        <Typography sx={{ fontSize: { xs: "13px", sm: "16px" } }}>
           სპეციალური ტურნირის „Cashgame Sharks” ბილეთი, სადაც გათამაშდება The
           Festival in Malta-ს საგზური
         </Typography>
@@ -59,13 +63,15 @@ const PrizesCard = () => {
         <StyledBorder />
         <CardGiftcardIcon
           sx={{
-            width: "40px",
-            height: "40px",
+            width: { xs: "35px", sm: "40px" },
+            height: { xs: "35px", sm: "40px" },
             marginRight: "16px",
             marginLeft: "16px",
           }}
         />
-        <Typography>ტექნიკის მაღაზიის ვაუჩერი</Typography>
+        <Typography sx={{ fontSize: { xs: "13px", sm: "16px" } }}>
+          ტექნიკის მაღაზიის ვაუჩერი
+        </Typography>
       </CardItem>
     </StyledCard>
   );

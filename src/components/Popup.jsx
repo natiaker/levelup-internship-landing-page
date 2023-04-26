@@ -3,10 +3,12 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import CloseIcon from "@mui/icons-material/Close";
 import CardMedia from "@mui/material/CardMedia";
 import { Card } from "@mui/material";
 import TabComponent from "./TabComponent";
+import SignupSection from "./SignupSection";
+import CloseBtn from "./CloseBtn";
+import PlayBtn from "./PlayBtn";
 
 const modalStyle = {
   position: "absolute",
@@ -17,7 +19,7 @@ const modalStyle = {
   paddingTop: { xs: "10px", sm: "0" },
   minWidth: { xs: "320px", sm: "500px", md: "600px" },
   width: { xs: "100%", sm: "90%", md: "70%", lg: "940px" },
-  height: "100vh",
+  height: "94vh",
   color: "text.primary",
   bgcolor: "background.default",
   borderRadius: "10px",
@@ -54,52 +56,32 @@ function Popup() {
         aria-describedby='modal-modal-description'
       >
         <Box sx={modalStyle}>
+          <SignupSection />
+          <CloseBtn handleClose={handleClose} />
+          <PlayBtn />
           <Box
-            display={{ xs: "flex", sm: "none" }}
-            justifyContent='space-between'
+            display={{ xs: "none", sm: "inline-flex" }}
             alignItems='center'
-            px={2}
-            mb={2}
+            position='sticky'
+            top='16px'
+            left='16px'
+            bgcolor='#25292B'
+            borderRadius='35px'
           >
-            <img
-              src={process.env.PUBLIC_URL + "/assets/logo.png"}
-              alt='logo'
-              width='24px'
-              height='24px'
-            />
-            <Box>
-              <Button sx={{ color: "text.primary" }}>Sign Up</Button>
-              <Button
-                variant='contained'
-                sx={{
-                  color: "text.primary",
-                  bgcolor: "background.active",
-                  ":hover": { bgcolor: "background.active" },
-                }}
-              >
-                Sign In
-              </Button>
+            <Box
+              bgcolor='#ffffff1d'
+              py='5px'
+              px='10px'
+              borderRadius='13px'
+            >
+              <Typography fontSize='13px'>სლოტები</Typography>
             </Box>
-          </Box>
-          <Box
-            sx={{
-              position: "absolute",
-              top: "16px",
-              right: "16px",
-              width: "34px",
-              height: "34px",
-              borderRadius: "50%",
-              cursor: "pointer",
-              bgcolor: "background.default",
-              display: { xs: "none", sm: "block" },
-            }}
-            onClick={handleClose}
-          >
-            <CloseIcon
-              sx={{
-                transform: "translate(20%, 20%)",
-              }}
-            />
+            <Typography
+              fontSize='13px'
+              px={1}
+            >
+              10 იანვარი - 12 მარტი
+            </Typography>
           </Box>
           <Card>
             <CardMedia
@@ -108,6 +90,28 @@ function Popup() {
               alt='banner'
             />
           </Card>
+          <Box
+            display={{ xs: "inline-flex", sm: "none" }}
+            alignItems='center'
+            borderRadius='35px'
+            pt={1}
+            px='10px'
+          >
+            <Box
+              bgcolor='#ffffff1d'
+              py='5px'
+              px='10px'
+              borderRadius='13px'
+            >
+              <Typography fontSize='13px'>სლოტები</Typography>
+            </Box>
+            <Typography
+              fontSize='13px'
+              px={1}
+            >
+              10 იანვარი - 12 მარტი
+            </Typography>
+          </Box>
           <Box
             sx={{
               p: { xs: "16px", sm: "43px" },

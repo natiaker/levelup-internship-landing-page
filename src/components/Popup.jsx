@@ -13,7 +13,8 @@ const modalStyle = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  marginTop: "30px",
+  marginTop: { xs: "104px", sm: "30px" },
+  paddingTop: { xs: "204px", sm: "0" },
   minWidth: { xs: "320px", sm: "500px", md: "600px" },
   width: { xs: "100%", sm: "90%", md: "80%", lg: "60%" },
   height: "100vh",
@@ -43,6 +44,33 @@ function Popup() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={modalStyle}>
+          <Box
+            display={{ xs: "flex", sm: "none" }}
+            justifyContent="space-between"
+            alignItems="center"
+            px={2}
+            mb={2}
+          >
+            <img
+              src={process.env.PUBLIC_URL + "/assets/logo.png"}
+              alt="logo"
+              width="24px"
+              height="24px"
+            />
+            <Box>
+              <Button sx={{ color: "text.primary" }}>Sign Up</Button>
+              <Button
+                variant="contained"
+                sx={{
+                  color: "text.primary",
+                  bgcolor: "background.active",
+                  ":hover": { bgcolor: "background.active" },
+                }}
+              >
+                Sign In
+              </Button>
+            </Box>
+          </Box>
           <Box
             sx={{
               position: "absolute",

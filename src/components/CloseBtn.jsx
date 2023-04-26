@@ -6,9 +6,9 @@ const CloseBtn = ({ handleClose }) => {
   return (
     <Box
       sx={{
-        position: "sticky",
+        position: "absolute",
         top: "16px",
-        left: "95%",
+        right: "16px",
         width: "34px",
         height: "34px",
         borderRadius: "50%",

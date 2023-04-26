@@ -4,16 +4,16 @@ import React from "react";
 const PlayBtn = () => {
   return (
     <Box
-      position='sticky'
-      top={{ xs: "80%", sm: "92%" }}
-      height='70px'
-      width='100%'
-      display='flex'
-      justifyContent='center'
-      alignItems='center'
-      bgcolor='#171718'
-      borderTop='4px solid #F05A22'
-      zIndex='1500'
+      position="sticky"
+      bottom="0"
+      height="70px"
+      width="100%"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      bgcolor="#171718"
+      borderTop="4px solid #F05A22"
+      zIndex="1500"
     >
       <Button
         sx={{

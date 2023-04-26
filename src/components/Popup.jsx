@@ -13,10 +13,10 @@ const modalStyle = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  marginTop: { xs: "104px", sm: "30px" },
-  paddingTop: { xs: "204px", sm: "0" },
+  marginTop: { xs: "50px", sm: "30px" },
+  paddingTop: { xs: "10px", sm: "0" },
   minWidth: { xs: "320px", sm: "500px", md: "600px" },
-  width: { xs: "100%", sm: "90%", md: "80%", lg: "940px" },
+  width: { xs: "100%", sm: "90%", md: "70%", lg: "940px" },
   height: "100vh",
   color: "text.primary",
   bgcolor: "background.default",
@@ -36,31 +36,41 @@ function Popup() {
 
   return (
     <>
-      <Button onClick={handleOpen}>Open modal</Button>
+      <Button
+        onClick={handleOpen}
+        variant='contained'
+        sx={{
+          color: "text.primary",
+          bgcolor: "background.active",
+          ":hover": { bgcolor: "background.active" },
+        }}
+      >
+        Open modal
+      </Button>
       <Modal
         open={open}
         onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
+        aria-labelledby='modal-modal-title'
+        aria-describedby='modal-modal-description'
       >
         <Box sx={modalStyle}>
           <Box
             display={{ xs: "flex", sm: "none" }}
-            justifyContent="space-between"
-            alignItems="center"
+            justifyContent='space-between'
+            alignItems='center'
             px={2}
             mb={2}
           >
             <img
               src={process.env.PUBLIC_URL + "/assets/logo.png"}
-              alt="logo"
-              width="24px"
-              height="24px"
+              alt='logo'
+              width='24px'
+              height='24px'
             />
             <Box>
               <Button sx={{ color: "text.primary" }}>Sign Up</Button>
               <Button
-                variant="contained"
+                variant='contained'
                 sx={{
                   color: "text.primary",
                   bgcolor: "background.active",
@@ -93,9 +103,9 @@ function Popup() {
           </Box>
           <Card>
             <CardMedia
-              component="img"
+              component='img'
               image={process.env.PUBLIC_URL + "/assets/banner.jpg"}
-              alt="banner"
+              alt='banner'
             />
           </Card>
           <Box
@@ -103,10 +113,16 @@ function Popup() {
               p: { xs: "16px", sm: "43px" },
             }}
           >
-            <Typography id="modal-modal-title" fontWeight="900">
+            <Typography
+              id='modal-modal-title'
+              fontWeight='900'
+            >
               მოიპოვე მრავალფეროვანი პრიზები და 10 საგზურიდან ერთ-ერთი
             </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            <Typography
+              id='modal-modal-description'
+              sx={{ mt: 2 }}
+            >
               მოხვდი პოკერის ფესტივალზე მალტაში
             </Typography>
             <TabComponent />

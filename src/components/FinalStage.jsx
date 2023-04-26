@@ -22,37 +22,56 @@ const StyledBorder = styled(Box)(({ theme }) =>
 const FinalStage = () => {
   return (
     <>
-      <StyledMainCard borderTop="4px solid #25292B !important" mt={3} p={3}>
+      <StyledMainCard
+        borderTop='4px solid #25292B !important'
+        bgcolor={{ xs: "#171718 !important" }}
+        mt={3}
+        p={3}
+      >
         <img
           src={process.env.PUBLIC_URL + "./assets/cover-3.png"}
-          alt="cover"
-          width="806px"
-          height="280px"
+          alt='cover'
+          width='100%'
         />
-        <Typography textAlign="center">
+        <Typography
+          textAlign='center'
+          fontSize={{ xs: "13px", sm: "16px" }}
+        >
           ᲒᲐᲔᲛᲒᲖᲐᲕᲠᲔ THE FESTIVAL IN MALTA-ᲖᲔ!
         </Typography>
-        <Typography textAlign="center">
+        <Typography
+          textAlign='center'
+          fontSize={{ xs: "13px", sm: "16px" }}
+        >
           The Festival სერიების ფარგლებში, ევროპაბეთი უკვე მეორედ აძლევს პოკერის
           მოთამაშეებს დაუვიწყარი მოგზაურობის შანსს.
         </Typography>
         <Box
-          display="flex"
-          justifyContent="space-between"
-          alignItems="center"
-          backgroundColor="#25292B"
-          width="75%"
-          height="50px"
+          display='flex'
+          justifyContent='space-between'
+          alignItems='center'
+          backgroundColor='#25292B'
+          width={{ xs: "100%", sm: "75%" }}
+          height='62px'
           pr={3}
-          borderRadius="10px"
-          margin="20px auto"
+          borderRadius='10px'
+          margin='20px auto'
+          boxSizing='border-box'
         >
           <StyledBorder />
-          <Typography>
+          <Typography
+            fontSize={{ xs: "13px", sm: "16px" }}
+            py={{ xs: 2 }}
+            pl={{ xs: 2 }}
+          >
             15-დან 21 მაისის ჩათვლით მალტა პოკერის ფესტივალს უმასპინძლებს
           </Typography>
         </Box>
-        <Box display="flex" justifyContent="space-between">
+        <Box
+          display='flex'
+          justifyContent='space-between'
+          flexDirection={{ xs: "column", md: "row" }}
+        >
           <ACategoryTravelCard custom={false} />
           <ACategoryTravelCard custom={false} />
           <ACategoryTravelCard custom={true} />
@@ -60,7 +79,13 @@ const FinalStage = () => {
       </StyledMainCard>
       <WinTravelSection />
       <MysticalKey />
-      <Typography sx={{ marginTop: "55px", marginBottom: "22px" }}>
+      <Typography
+        sx={{
+          marginTop: "55px",
+          marginBottom: "22px",
+          fontSize: { xs: "16px", sm: "18px" },
+        }}
+      >
         წესები და პირობები
       </Typography>
       <Rules />

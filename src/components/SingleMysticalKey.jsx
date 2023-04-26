@@ -25,7 +25,7 @@ const SingleMysticalKey = ({ place, mysticalKey }) => {
           justifyContent: "center",
           alignItems: "center",
           boxShadow: "#2C3234 0px 0px 5px",
-          marginRight: "20px",
+          marginRight: { xs: "10px", sm: "20px" },
         }}
       >
         <Typography>{place}</Typography>
@@ -35,6 +35,7 @@ const SingleMysticalKey = ({ place, mysticalKey }) => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          fontSize: { xs: "13px", sm: "14px" },
         }}
       >
         {mysticalKey}

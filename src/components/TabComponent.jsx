@@ -15,6 +15,7 @@ const StyledTab = styled(Tab)(({ theme }) =>
     height: "77px",
     borderRadius: "8px",
     color: "text.primary",
+    fontSize: { xs: "13px", md: "16px" },
   })
 );
 
@@ -28,7 +29,7 @@ export default function TabComponent() {
       <Tabs
         value={value}
         onChange={handleTabs}
-        variant="fullWidth"
+        variant='fullWidth'
         sx={{
           bgcolor: "background.secondary",
           marginTop: "39px",
@@ -42,17 +43,26 @@ export default function TabComponent() {
           },
         }}
       >
-        <StyledTab label="Cash Games" />
-        <StyledTab label="Spring Series" />
-        <StyledTab label="Final Stage" />
+        <StyledTab label='Cash Games' />
+        <StyledTab label='Spring Series' />
+        <StyledTab label='Final Stage' />
       </Tabs>
-      <TabPanel value={value} index={0}>
+      <TabPanel
+        value={value}
+        index={0}
+      >
         <CashGames />
       </TabPanel>
-      <TabPanel value={value} index={1}>
+      <TabPanel
+        value={value}
+        index={1}
+      >
         <SpringSeries />
       </TabPanel>
-      <TabPanel value={value} index={2}>
+      <TabPanel
+        value={value}
+        index={2}
+      >
         <FinalStage />
       </TabPanel>
     </Box>

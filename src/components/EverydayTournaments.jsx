@@ -4,16 +4,31 @@ import { Box, Typography } from "@mui/material";
 
 const EverydayTournaments = () => {
   return (
-    <StyledMainCard borderTop="4px solid #25292B !important" mt={3} px={3}>
-      <Typography marginBottom="20px" textAlign="center" my={3}>
+    <StyledMainCard
+      borderTop="4px solid #25292B !important"
+      mt={3}
+      px={{ xs: 1, sm: 3 }}
+    >
+      <Typography
+        marginBottom="20px"
+        textAlign={{ xs: "left", sm: "center" }}
+        my={3}
+        fontSize={{ xs: "14px", sm: "16px" }}
+      >
         ᲧᲝᲕᲔᲚᲓᲦᲘᲣᲠᲘ ᲢᲣᲠᲜᲘᲠᲔᲑᲘ ᲓᲐ ᲡᲐᲢᲔᲚᲘᲢᲔᲑᲘ
       </Typography>
-      <Box display="flex" flexWrap="wrap">
-        <Box position="relative" mr={1}>
+      <Box
+        display="flex"
+        flexWrap="wrap"
+        justifyContent="space-between"
+        flexDirection={{ xs: "column", sm: "row" }}
+      >
+        <Box position="relative" width={{ xs: "100%", md: "49%" }}>
           <img
             src={process.env.PUBLIC_URL + "./assets/tournament-bg.png"}
             alt="card1"
             display="inline-block"
+            width="100%"
           />
           <Box position="absolute" top="30px" left="30px" display="flex">
             <Box marginRight="40px">
@@ -41,11 +56,12 @@ const EverydayTournaments = () => {
             </Box>
           </Box>
         </Box>
-        <Box position="relative" float="right">
+        <Box position="relative" width={{ xs: "100%", md: "49%" }}>
           <img
             src={process.env.PUBLIC_URL + "./assets/tournament-bg.png"}
             alt="card2"
             display="inline-block"
+            width="100%"
           />
           <Box position="absolute" top="30px" left="30px" display="flex">
             <Box marginRight="40px">
@@ -73,10 +89,15 @@ const EverydayTournaments = () => {
             </Box>
           </Box>
         </Box>
-        <Box position="relative">
+        <Box
+          position="relative"
+          width="100%"
+          height={{ xs: "85px", md: "unset" }}
+        >
           <img
             src={process.env.PUBLIC_URL + "./assets/main-bg.png"}
             alt="card3"
+            width="100%"
           />
           <Box position="absolute" top="30px" left="30%" display="flex">
             <Box marginRight="40px">

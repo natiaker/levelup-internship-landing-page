@@ -30,7 +30,7 @@ const LeaderBoardItems = ({ place, voucher, prize, icon }) => {
       >
         <Typography>{place}</Typography>
       </Box>
-      <Typography fontSize={{ xs: "10px", sm: "13px" }}>{voucher}</Typography>
+      <Typography fontSize={{ xs: "10px", sm: "14px" }}>{voucher}</Typography>
       <Typography
         sx={{
           display: "flex",

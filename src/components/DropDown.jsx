@@ -12,12 +12,12 @@ const DropDown = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          width: "320px",
+          width: { xs: "300px", md: "320px" },
           height: "30px",
           marginBottom: "20px",
-          bgcolor: "background.secondary",
+          bgcolor: "#1E2122",
           borderRadius: "30px",
-          border: "2px solid #25292B",
+          border: "2px solid #2C3234",
           "& .MuiOutlinedInput-root": {
             "& fieldset": {
               height: "30px",
@@ -50,7 +50,7 @@ const DropDown = () => {
               sx: {
                 color: "text.primary",
                 bgcolor: "background.default",
-                fontSize: 13,
+                fontSize: { xs: "12px", sm: "13px" },
               },
             },
           }}

@@ -19,12 +19,14 @@ const SpringSeries = () => {
     <>
       <TournamentsCard />
       <StyledMainCard marginTop="27px">
-        <StyledMainTitle marginBottom="20px">
+        <StyledMainTitle marginBottom="20px" padding={{ xs: "0 35px 19px" }}>
           <StyledTopBorder />
-          ᲛᲝᲮᲕᲓᲘ TOP20 ᲚᲘᲓᲔᲠᲑᲝᲠᲓᲨᲘ ᲢᲣᲠᲜᲘᲠᲔᲑᲖᲔ ᲓᲐᲒᲠᲝᲕᲔᲑᲣᲚᲘ ᲥᲣᲚᲔᲑᲘᲗ
+          <Typography fontSize={{ xs: "16px", sm: "18px" }} fontWeight="900">
+            ᲛᲝᲮᲕᲓᲘ TOP20 ᲚᲘᲓᲔᲠᲑᲝᲠᲓᲨᲘ ᲢᲣᲠᲜᲘᲠᲔᲑᲖᲔ ᲓᲐᲒᲠᲝᲕᲔᲑᲣᲚᲘ ᲥᲣᲚᲔᲑᲘᲗ
+          </Typography>
         </StyledMainTitle>
         <DropDown />
-        <Box px={3} pb={3}>
+        <Box px={{ xs: 1, sm: 3 }} pb={3}>
           <LeaderboardCard />
           <PrizesCard />
           <Typography textAlign="center" fontSize="14px" marginBottom="12px">
@@ -41,7 +43,11 @@ const SpringSeries = () => {
       </StyledMainCard>
       <EverydayTournaments />
       <SideLeaderboardCard />
-      <Typography sx={{ marginBottom: "22px" }}>წესები და პირობები</Typography>
+      <Typography
+        sx={{ marginBottom: "22px", fontSize: { xs: "16px", sm: "18px" } }}
+      >
+        წესები და პირობები
+      </Typography>
       <Rules />
       <Typography sx={{ marginTop: "55px", marginBottom: "32px" }}>
         მსგავსი აქციები

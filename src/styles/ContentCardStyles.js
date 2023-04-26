@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 export const StyledMainTitle = styled(Box)(({ theme }) =>
   theme.unstable_sx({
     bgcolor: "#2C3234", 
-    height: "70px",
+    minHeight: "70px",
     textAlign: "center",
     fontSize: "18px",
     borderTopLeftRadius: "15px",

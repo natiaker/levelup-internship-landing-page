@@ -16,7 +16,7 @@ const modalStyle = {
   marginTop: { xs: "104px", sm: "30px" },
   paddingTop: { xs: "204px", sm: "0" },
   minWidth: { xs: "320px", sm: "500px", md: "600px" },
-  width: { xs: "100%", sm: "90%", md: "80%", lg: "60%" },
+  width: { xs: "100%", sm: "90%", md: "80%", lg: "940px" },
   height: "100vh",
   color: "text.primary",
   bgcolor: "background.default",
@@ -103,7 +103,7 @@ function Popup() {
               p: { xs: "16px", sm: "43px" },
             }}
           >
-            <Typography id="modal-modal-title">
+            <Typography id="modal-modal-title" fontWeight="900">
               მოიპოვე მრავალფეროვანი პრიზები და 10 საგზურიდან ერთ-ერთი
             </Typography>
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>

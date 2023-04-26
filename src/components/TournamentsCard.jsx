@@ -37,10 +37,12 @@ const ClockBg = styled(Box)(({ theme }) =>
 
 const TournamentsCard = () => {
   return (
-    <StyledMainCard position='relative'>
+    <StyledMainCard position="relative">
       <StyledMainTitle>
         <StyledTopBorder />
-        ᲢᲣᲠᲜᲘᲠᲔᲑᲘ ᲓᲐ ᲡᲐᲢᲔᲚᲘᲢᲔᲑᲘ
+        <Typography fontSize={{ xs: "16px", sm: "18px" }} fontWeight="900">
+          ᲢᲣᲠᲜᲘᲠᲔᲑᲘ ᲓᲐ ᲡᲐᲢᲔᲚᲘᲢᲔᲑᲘ
+        </Typography>
       </StyledMainTitle>
       <CardContent
         sx={{
@@ -50,33 +52,21 @@ const TournamentsCard = () => {
           flexDirection: "column",
         }}
       >
-        <Typography fontSize='16px'>
+        <Typography fontWeight="900" textAlign="center">
           სერიის ფარგლებში, ყოველდღიურად გაიმართება 3 ივენთი:
         </Typography>
         <ClockBorder>
           <ClockBg>
             <AccessTimeIcon sx={{ paddingLeft: "5px" }} />
           </ClockBg>
-          <Typography
-            fontSize='13px'
-            marginLeft='20px'
-            marginRight='20px'
-          >
+          <Typography fontSize="13px" marginLeft="20px" marginRight="20px">
             19:00 / 19:30 / 20:00
           </Typography>
         </ClockBorder>
-        <Typography
-          fontSize='13px'
-          textAlign='center'
-          mb={1}
-        >
+        <Typography fontSize="13px" textAlign="center" mb={1}>
           * ყველა ტურნირზე მოხვედრა შესაძლებელია 0 ლარიდან.
         </Typography>
-        <Typography
-          maxWidth='380px'
-          fontSize='13px'
-          textAlign='center'
-        >
+        <Typography maxWidth="380px" fontSize="13px" textAlign="center">
           ტურნირების სრული განრიგის სანახავად გადადი პოკერის ლობიში
         </Typography>
         <Box
@@ -87,19 +77,20 @@ const TournamentsCard = () => {
             right: 0,
             display: "flex",
             justifyContent: "space-between",
+            height: { xs: "82px", md: "unset" },
           }}
         >
           <img
             src={process.env.PUBLIC_URL + "/assets/promo-left-img.png"}
-            alt='promo-left'
+            alt="promo-left"
           />
           <img
             src={process.env.PUBLIC_URL + "/assets/promo-right-img.png"}
-            alt='promo-right'
+            alt="promo-right"
           />
         </Box>
         <Button
-          variant='contained'
+          variant="contained"
           sx={{
             bgcolor: "background.active",
             mt: 2,

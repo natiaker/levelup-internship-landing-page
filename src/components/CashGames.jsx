@@ -16,7 +16,10 @@ const CashGames = () => {
     <>
       <StyledMainCard variant="outlined">
         <StyledMainTitle>
-          <StyledTopBorder />1 ₾ ᲠᲔᲘᲙᲘ = 1 ᲥᲣᲚᲐᲡ
+          <StyledTopBorder />
+          <Typography fontSize={{ xs: "16px", sm: "18px" }} fontWeight="900">
+            1 ₾ ᲠᲔᲘᲙᲘ = 1 ᲥᲣᲚᲐᲡ
+          </Typography>
         </StyledMainTitle>
         <CardContent>
           <Box

@@ -30,26 +30,26 @@ const boardStyle = {
 const MysticalKey = () => {
   return (
     <StyledMainCard mt={3}>
-      <StyledMainTitle marginBottom='20px'>
+      <StyledMainTitle marginBottom="20px">
         <StyledTopBorder />
         <img
-          src={process.env.PUBLIC_URL + "./assets/mystical-key.png"}
-          alt='mystical-key'
-          width='65%'
-          height='40px'
+          src={process.env.PUBLIC_URL + "/assets/mystical-key.png"}
+          alt="mystical-key"
+          width="65%"
+          height="40px"
         />
       </StyledMainTitle>
       <Typography
-        textAlign='center'
-        fontSize='14px'
-        marginY='20px'
+        textAlign="center"
+        fontSize="14px"
+        marginY="20px"
         p={{ xs: 0, md: 3 }}
       >
         მოთამაშეები გარკვეული საპრიზო ადგილების დაკავების შემთხვევაში მიიღებენ
         საიდუმლო გასაღებს
       </Typography>
       <Box sx={boardStyle}>
-        {mysticalKeyData.map(item => {
+        {mysticalKeyData.map((item) => {
           return (
             <SingleMysticalKey
               key={item.place}

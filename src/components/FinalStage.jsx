@@ -23,40 +23,34 @@ const FinalStage = () => {
   return (
     <>
       <StyledMainCard
-        borderTop='4px solid #25292B !important'
+        borderTop="4px solid #25292B !important"
         bgcolor={{ xs: "#171718 !important" }}
         mt={3}
         p={3}
       >
         <img
-          src={process.env.PUBLIC_URL + "./assets/cover-3.png"}
-          alt='cover'
-          width='100%'
+          src={process.env.PUBLIC_URL + "/assets/cover-3.png"}
+          alt="cover"
+          width="100%"
         />
-        <Typography
-          textAlign='center'
-          fontSize={{ xs: "13px", sm: "16px" }}
-        >
+        <Typography textAlign="center" fontSize={{ xs: "13px", sm: "16px" }}>
           ᲒᲐᲔᲛᲒᲖᲐᲕᲠᲔ THE FESTIVAL IN MALTA-ᲖᲔ!
         </Typography>
-        <Typography
-          textAlign='center'
-          fontSize={{ xs: "13px", sm: "16px" }}
-        >
+        <Typography textAlign="center" fontSize={{ xs: "13px", sm: "16px" }}>
           The Festival სერიების ფარგლებში, ევროპაბეთი უკვე მეორედ აძლევს პოკერის
           მოთამაშეებს დაუვიწყარი მოგზაურობის შანსს.
         </Typography>
         <Box
-          display='flex'
-          justifyContent='space-between'
-          alignItems='center'
-          backgroundColor='#25292B'
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+          backgroundColor="#25292B"
           width={{ xs: "100%", sm: "75%" }}
-          height='62px'
+          height="62px"
           pr={3}
-          borderRadius='10px'
-          margin='20px auto'
-          boxSizing='border-box'
+          borderRadius="10px"
+          margin="20px auto"
+          boxSizing="border-box"
         >
           <StyledBorder />
           <Typography
@@ -68,8 +62,8 @@ const FinalStage = () => {
           </Typography>
         </Box>
         <Box
-          display='flex'
-          justifyContent='space-between'
+          display="flex"
+          justifyContent="space-between"
           flexDirection={{ xs: "column", md: "row" }}
         >
           <ACategoryTravelCard custom={false} />

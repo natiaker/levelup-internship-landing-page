@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/levelup-internship-landing-page/static/js/main.ea17412c.js",
+    "main.js": "/levelup-internship-landing-page/static/js/main.21b643a6.js",
     "index.html": "/levelup-internship-landing-page/index.html",
-    "main.ea17412c.js.map": "/levelup-internship-landing-page/static/js/main.ea17412c.js.map"
+    "main.21b643a6.js.map": "/levelup-internship-landing-page/static/js/main.21b643a6.js.map"
   },
   "entrypoints": [
-    "static/js/main.ea17412c.js"
+    "static/js/main.21b643a6.js"
   ]
 }
